@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -23,4 +24,13 @@ public class Word2VecModel {
         return modelHashMap.get(word);
     }
 
+    @Override
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append("Number of words = "); sb.append(this.modelHashMap.size());
+        Iterator<String> stringIterator = this.modelHashMap.keySet().iterator();
+        String word = stringIterator.next();
+        sb.append("Dimension = ");  sb.append(this.modelHashMap.get(word).length);
+        return sb.toString();
+    }
 }
