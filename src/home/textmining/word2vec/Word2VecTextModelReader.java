@@ -9,11 +9,16 @@ import java.io.InputStreamReader;
  * Created by hok on 6/9/16.
  */
 public class Word2VecTextModelReader {
-    private boolean ignoreFirstLine = true;
+    private boolean ignoreFirstLine;
     private InputStream iStream;
 
-    public Word2VecTextModelReader(InputStream iStream) {
+    public Word2VecTextModelReader(InputStream iStream, boolean ignoreFirstLine) {
         this.iStream = iStream;
+        this.ignoreFirstLine = ignoreFirstLine;
+    }
+
+    public Word2VecTextModelReader(InputStream iStream) {
+        this(iStream, true);
     }
 
     public Word2VecModel readModel() throws IOException {
