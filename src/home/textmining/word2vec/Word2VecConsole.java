@@ -1,3 +1,5 @@
+package home.textmining.word2vec;
+
 import java.io.*;
 import java.util.Arrays;
 

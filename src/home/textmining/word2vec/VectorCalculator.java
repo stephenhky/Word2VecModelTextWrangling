@@ -1,3 +1,5 @@
+package home.textmining.word2vec;
+
 /**
  * Created by hok on 6/9/16.
  */

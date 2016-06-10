@@ -1,3 +1,5 @@
+package home.textmining.word2vec;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
