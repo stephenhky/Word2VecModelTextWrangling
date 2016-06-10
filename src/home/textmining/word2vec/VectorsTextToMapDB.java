@@ -29,10 +29,11 @@ public class VectorsTextToMapDB {
             reader.readLine();
         }
 
+        int j = 0;
         for (String line; (line=reader.readLine())!=null; ) {
             String[] tokens = line.split(" ");
             String word = tokens[0];
-            System.out.println(word);
+            System.out.println((j++)+" : "+word);
             double[] vector = new double[tokens.length-1];
             for (int i=0; i<vector.length; i++) {
                 vector[i] = Double.parseDouble(tokens[i+1]);
