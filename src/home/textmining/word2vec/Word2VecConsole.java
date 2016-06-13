@@ -14,7 +14,7 @@ public class Word2VecConsole {
         File inputFile = new File(args[0]);
         VectorsTextToMapDB converter = new VectorsTextToMapDB();
         Word2VecModel model = converter.convertVectorsFromTextToMapDB(new FileInputStream(inputFile),
-                new File("/Users/hok/Downloads/Temp.db"));
+                new File("/Users/hok/Data/Word2Vec/Word2VecMapDB.db"));
 
         double time1 = System.nanoTime();
 

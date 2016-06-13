@@ -40,9 +40,9 @@ public class VectorsTextToMapDB {
             }
             vectorMap.put(word, vector);
         }
-
-        db.close();
+        db.commit();
         return new Word2VecModel(vectorMap);
     }
+
 
 }

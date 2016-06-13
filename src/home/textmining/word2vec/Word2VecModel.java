@@ -26,6 +26,8 @@ public class Word2VecModel {
         return modelHashMap.get(word);
     }
 
+    public Map<String, double[]> getModelHashMap() { return modelHashMap; }
+
     @Override
     public String toString() {
         StringBuffer sb = new StringBuffer();
