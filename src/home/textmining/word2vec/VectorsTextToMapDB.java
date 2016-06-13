@@ -44,5 +44,10 @@ public class VectorsTextToMapDB {
         return new Word2VecModel(vectorMap);
     }
 
+    public static Word2VecModel getMapDBWord2VecModel(File hashMapFile) {
+        DB db = DBMaker.newFileDB(hashMapFile).make();
+        ConcurrentMap<String, double[]> vectorMap = db.getHashMap("map");
 
+        return new Word2VecModel(vectorMap);
+    }
 }

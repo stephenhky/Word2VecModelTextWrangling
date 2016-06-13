@@ -12,9 +12,10 @@ public class Word2VecConsole {
         double time0 = System.nanoTime();
 
         File inputFile = new File(args[0]);
-        VectorsTextToMapDB converter = new VectorsTextToMapDB();
-        Word2VecModel model = converter.convertVectorsFromTextToMapDB(new FileInputStream(inputFile),
-                new File("/Users/hok/Data/Word2Vec/Word2VecMapDB.db"));
+//        VectorsTextToMapDB converter = new VectorsTextToMapDB();
+//        Word2VecModel model = converter.convertVectorsFromTextToMapDB(new FileInputStream(inputFile),
+//                new File(args[1]));
+        Word2VecModel model = VectorsTextToMapDB.getMapDBWord2VecModel(new File(args[1]));
 
         double time1 = System.nanoTime();
 
