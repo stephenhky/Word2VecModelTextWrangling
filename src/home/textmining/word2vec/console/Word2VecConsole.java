@@ -1,4 +1,7 @@
-package home.textmining.word2vec;
+package home.textmining.word2vec.console;
+
+import home.textmining.word2vec.VectorsTextToMapDB;
+import home.textmining.word2vec.Word2VecModel;
 
 import java.io.*;
 import java.util.Arrays;
