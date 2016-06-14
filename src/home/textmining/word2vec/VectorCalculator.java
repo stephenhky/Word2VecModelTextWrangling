@@ -45,4 +45,12 @@ public class VectorCalculator {
         }
         return add(vector1, neg_vec2);
     }
+
+    public static double[] scalarMultiply(double[] vector, double num) {
+        double[] mulVector = new double[vector.length];
+        for (int i=0; i<vector.length; i++) {
+            mulVector[i] = vector[i] / num;
+        }
+        return mulVector;
+    }
 }
