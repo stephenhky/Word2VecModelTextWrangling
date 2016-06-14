@@ -28,6 +28,10 @@ public class Word2VecModel {
 
     public Map<String, double[]> getModelHashMap() { return modelHashMap; }
 
+    public Iterator<String> getSOIterator() {
+        return modelHashMap.keySet().iterator();
+    }
+
     @Override
     public String toString() {
         StringBuffer sb = new StringBuffer();
