@@ -11,11 +11,7 @@ public class Word2VecConsole {
     public static void main(String[] args) throws IOException {
         double time0 = System.nanoTime();
 
-        File inputFile = new File(args[0]);
-//        VectorsTextToMapDB converter = new VectorsTextToMapDB();
-//        Word2VecModel model = converter.convertVectorsFromTextToMapDB(new FileInputStream(inputFile),
-//                new File(args[1]));
-        Word2VecModel model = VectorsTextToMapDB.getMapDBWord2VecModel(new File(args[1]));
+        Word2VecModel model = VectorsTextToMapDB.getMapDBWord2VecModel(new File(args[0]));
 
         double time1 = System.nanoTime();
 

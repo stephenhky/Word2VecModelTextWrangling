@@ -50,4 +50,19 @@ public class VectorsTextToMapDB {
 
         return new Word2VecModel(vectorMap);
     }
+
+    public static void main(String[] args) throws IOException {
+        VectorsTextToMapDB converter = new VectorsTextToMapDB();
+
+        String inputFilePath = args[0];
+        String outputFilePath = args[1];
+
+        System.out.println("Starting creating mapDB for model....");
+
+        double time0 = System.nanoTime();
+        converter.convertVectorsFromTextToMapDB(new FileInputStream(new File(inputFilePath)), new File(outputFilePath));
+        double time1 = System.nanoTime();
+
+        System.out.println("Finished. "+(time1-time0)/1e+9+" sec");
+    }
 }
